@@ -1,30 +1,25 @@
 "use strict"
 var CarLot = (function(augCarLot) {
-    var container = document.getElementById('cardForEachCar');
-    var card = CarLot.getInventory()[i];)
 
 }
-    augCarLot.populatePage = function() {
-	var buildString = [];
-        for (var i = 0; i < card.length; i++) {
-        	container.innerHTML += buildString;
+    augCarLot.populatePage = function(callBackToDisplay) {
+    var container = document.getElementById('cardForEachCar');
+	var buildString = "";
+        for (var i = 0; i < currentCard.length; i++) {
+    		var currentCard += Carlot.getInventory[i];
+        	buildString += `<div class='col-sm-4'><header><h1>${currentCard.make}</h1></header><section><p>${currentCard.model}</p><p>${currentCard.year}</p><p>${currentCard.price}</p><p>${currentCard.color}</p><p>${currentCard.description}</p></div><br>`;
 
         }
-        buildCard(card);
+        	container.innerHTML = buildString;
     }
 
-
-augCarLot.buildCard = function(card) {
-    for (var t = 0; t < card.length; t++) {
-    	var currentCard = Carlot.getInventory[i];
-         buildString += `<div class='col-sm-4'><header><h1>${currentCard.make}</h1></header><section><p>${currentCard.model}</p><p>${currentCard.year}</p><p>${currentCard.price}</p><p>${currentCard.color}</p><p>${currentCard.description}</p></div><br>`;
-        document.getElementsByClassName('row').innerHTML += buildString;
-    }
 
 return augCarLot;
+        	callBackToDisplay(buildString);  
 })(CarLot || {});
 
 
+// console.log("CarLot", CarLot);
 
 
 
@@ -39,6 +34,12 @@ return augCarLot;
 
 
 
+// augCarLot.buildCard = function(card) {
+//     for (var t = 0; t < card.length; t++) {
+//     	var currentCard = Carlot.getInventory[i];
+//          buildString += `<div class='col-sm-4'><header><h1>${currentCard.make}</h1></header><section><p>${currentCard.model}</p><p>${currentCard.year}</p><p>${currentCard.price}</p><p>${currentCard.color}</p><p>${currentCard.description}</p></div><br>`;
+//         document.getElementsByClassName('row').innerHTML += buildString;
+//     }
 
 
 
