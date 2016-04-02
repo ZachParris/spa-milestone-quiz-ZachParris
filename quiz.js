@@ -1,23 +1,22 @@
 "use strict"
 var CarLot = (function(augCarLot) {
 
-}
-    augCarLot.populatePage = function(callBackToDisplay) {
-    var container = document.getElementById('cardForEachCar');
-	var buildString = "";
+    augCarLot.populatePage = function(currentCard) {
+        var container = document.getElementById('cardForEachCar');
+        var buildString = "";
         for (var i = 0; i < currentCard.length; i++) {
-    		var currentCard += Carlot.getInventory[i];
-        	buildString += `<div class='col-sm-4'><header><h1>${currentCard.make}</h1></header><section><p>${currentCard.model}</p><p>${currentCard.year}</p><p>${currentCard.price}</p><p>${currentCard.color}</p><p>${currentCard.description}</p></div><br>`;
+            var currentCard += Carlot.getInventory[i];
+            buildString += `<div class='col-sm-4'><header><h1>${currentCard.make}</h1></header><section><p>${currentCard.model}</p><p>${currentCard.year}</p><p>${currentCard.price}</p><p>${currentCard.color}</p><p>${currentCard.description}</p></div><br>`;
 
         }
-        	container.innerHTML = buildString;
+        container.innerHTML = buildString;
     }
 
 
-return augCarLot;
-        	callBackToDisplay(buildString);  
+    return augCarLot;
 })(CarLot || {});
 
+CarLot.populatePage(cu);
 
 // console.log("CarLot", CarLot);
 
