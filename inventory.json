@@ -4,7 +4,7 @@
       "make": "Nissan",
       "model": "Rogue",
       "year": "2006",
-      "price": "8999",
+      "price": "8,999",
       "color": "FireBrick",
       "purchased": false,
       "description": "This is an immaculate 2006 Nissan Rogue with only 25000 miles on it. Leather seats, power everything."
@@ -13,17 +13,17 @@
       "make": "Nissan",
       "model": "Maxima",
       "year": "2005",
-      "price": "6250",
-      "color": "grey",
+      "price": "6,250",
+      "color": "Gold",
       "purchased": false,
-      "description": "This a super reliable, reasonably priced, 2005 Nissan Maxima with 100,000 miles on it. Leather seats, seat warmers, sun-roof, and power everything."
+      "description": "This a super reliable, '05 Maxima with 100,000 miles on it. Leather seats, and power everything."
     },
     {
       "make": "Nissan",
       "model": "Altima",
       "year": "2006",
-      "price": "3200",
-      "color": "black",
+      "price": "3,200",
+      "color": "Blue",
       "purchased": false,
       "description": "A well maintained 2006 Nissan Altima with 130,000 miles on it. Needs a little work but runs great."
     }

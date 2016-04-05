@@ -1,26 +1,28 @@
-// "use strict"
+"use strict"
 // This is the main iife that gets augmented by the other js files
 
-var CarLot = (function () {
-  var inventory = [];
+var CarLot = (function() {
+    var inventory = [];
 
-  return {
-    getInventory: function () {
-      return inventory;
-    },
-    loadInventory: function () {
-      var inventoryLoader = new XMLHttpRequest();
+    return {
+        getInventory: function() {
+            return inventory;
+        },
+        loadInventory: function(callbackToInvoke) {
+            var inventoryLoader = new XMLHttpRequest();
 
-      inventoryLoader.addEventListener("load", function() {
-        inventory = JSON.parse(this.responseText).cars;
-        // console.log("inventory", inventory);
-        // callBackFunction(inventory);
-      });
+            inventoryLoader.addEventListener("load", loadJson);
 
-        inventoryLoader.open("GET", "inventory.json");
-        inventoryLoader.send();
-    }
-  };
+            inventoryLoader.open("GET", "inventory.json");
+            inventoryLoader.send();
+
+
+            function loadJson() {
+                inventory = JSON.parse(this.responseText).cars;
+                callbackToInvoke();
+            };
+        }
+    };
 
 })();
 

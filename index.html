@@ -3,36 +3,38 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Spa Quiz</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="quiz.css">
+    <title>Spa Quiz</title>
 </head>
 
 <body>
 
-    <nav class="navbar navbar-default navbar-fixed-top">
+    <nav class="navbar navbar-default">
         <div class="container-fluid">
-            <div class="navbar-form navbar-left">
-                <a class="navbar-brand" href="#">Auto City</a>
-                <input type="text" class="form-control" id="searchInventory" placeholder="Your Description">
+            <form class="navbar-form navbar-left" role='search'>
+              <div class="form-group">
+                <input type="text" class="form-control" id="input" placeholder="Your Description">
+              </div>
                 <button type="" class="btn btn-default">Submit</button>
+              </form>
             </div>
-        </div>
     </nav>
+        
+        <h1>Nissan City</h1>
 
 
-    <div id="container" class="container">
+    <div class="container">
         <div class="row" id="cardForEachCar">
 
         </div>
     </div>
 
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     <script type="text/javascript" src="carLot.js"></script>
-    <script type="text/javascript" src "quiz.js"></script>
+    <script type="text/javascript" src="changes.js"></script>
     <script type="text/javascript" src="eventListener.js"></script>
+    <script type="text/javascript" src="quiz.js"></script>
 </body>
 
 </html>
