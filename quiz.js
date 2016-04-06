@@ -12,11 +12,9 @@ function populatePage(inventory) {
             buildString += `<h5>${inventory[i].color}</h5>`;
             buildString += `<p id= "description${i}">${inventory[i].description}</p>`;
             buildString += `</div>`;
-            // container.innerHTML += buildString;
             cardDiv.innerHTML = (buildString);
             container.appendChild(cardDiv);
             var card = document.getElementById(`card${i}`);
-            console.log("card", card);
 
             CarLot.addClickEvent(card, "description" + i);
         };
