@@ -24,7 +24,7 @@ function populatePage(inventory) {
 
     	function showInventory(){
     		var getCar = CarLot.getInventory();
-    		populatePage(getCar);
+    		populatePage(getCar); 
 
     	};
 

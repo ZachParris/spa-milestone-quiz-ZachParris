@@ -1,5 +1,4 @@
 "use strict"
-// This is the main iife that gets augmented by the other js files
 
 var CarLot = (function() {
     var inventory = [];
@@ -26,5 +25,4 @@ var CarLot = (function() {
 
 })();
 
-// CarLot.loadInventory();
 
